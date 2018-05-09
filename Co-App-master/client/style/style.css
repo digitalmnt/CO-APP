@@ -1,0 +1,72 @@
+html {
+	width: 100%;
+}
+#home-map {
+	width: 100%;
+	height:100vh;
+
+}
+#map_submit {
+	width: 100%;
+	height: 400px;
+	margin-top: 10px;
+}
+.jumbotron {
+	
+}
+button.btn-default {
+	color: white;
+}
+.active {
+	text-decoration: underline;
+}
+.navbar-nav > li:hover {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+#green {
+	background-color: #4CAF50;
+}
+.footer {
+	margin-top: 50px;
+	width: 100%;
+	position: absolute;
+	bottom: -200px;
+	float: right;
+
+}
+.home > .footer {
+	width: 100%;
+	position: relative;
+	bottom: 0px;
+	float: right;
+}
+.footer > a {
+	display: inline;
+	float: right;
+	margin: 0 2% 0 2%;
+
+
+}
+.footer > a > button.btn:hover {
+	text-decoration: underline;
+}
+button.btn-default {
+	background-color: #e8f5e9;
+}
+.heady {
+	padding-top: 75px;
+
+}
+.footer {
+	margin-top: 50px;
+}
+.messagejumbo {
+	margin-top: 75px;
+}
+.barrrterMap {
+	padding-bottom: 5%;
+}
+.container {
+	padding-top: 3%;
+}
+

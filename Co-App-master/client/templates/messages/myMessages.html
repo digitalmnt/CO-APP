@@ -1,0 +1,28 @@
+<template name="myMessage">
+	<div class="container">
+		<div class="jumbotron messagejumbo">
+			<div id="message">
+				<h1>Subject: {{subject}}</h1>
+				<p>Message: {{body}}</p>
+				<p>From: {{sentBy}}</p>
+			</div>
+		</div>
+	</div>
+</template>
+<template name="noMessage">
+	<div class="container">
+		<div class="jumbotron messagejumbo">
+			<h1>You have no messages at this time</h1>
+		</div>
+	</div>
+</template>
+<template name="myMessages">
+	{{#if noMessages}}
+		{{> noMessage}}
+	{{else}}
+		{{#each messages}}
+			{{> myMessage}}
+		{{/each}}
+	{{/if}}
+	
+</template>

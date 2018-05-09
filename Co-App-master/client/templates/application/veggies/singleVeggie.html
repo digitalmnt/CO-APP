@@ -1,0 +1,49 @@
+<template name="singleVeggie">
+	<div class="container jumbotron messagejumbo">
+		<div class="container">
+			<div class="col-lg-6">
+				<h1>Title: {{title}}</h1>
+				<p>Specs: {{specifications}}</p>
+				<p>Quantity: {{quantity}}</p>
+				<p>Submitted: {{time}}</p>
+				{{#if donation}}<p>Pick-up instructions: {{donation}}</p>{{/if}}
+				{{#if barter}}
+					<p>Barter Price: {{compensation}}</p>
+					{{#if edit}}<a class="editLinkSingleVeggie" href="{{pathFor 'veggieBarter'}}"><button  class="btn btn-raised btn-success">Barter with farmer</button></a>{{/if}}
+				{{/if}}
+				
+				{{#if veggieOwner}}<a class="editLinkSingleVeggie" href="{{pathFor 'veggieEdit'}}"><button  class="btn btn-raised btn-success">Edit</button></a>{{/if}}
+				<a class="editLinkSingleVeggie" href="{{pathFor 'veggies'}}"><button  class="btn btn-raised btn-success">See All Veggies</button></a>
+			</div>
+			<div class="col-lg-6">
+				<div class="single-map">
+					{{> singleVeggieMap}}
+				</div>
+			</div>
+		</div>
+	</div>
+</template>
+		<!-- 
+		Julia's Ideas for development:
+			Direct sourcing!!!!!!!
+			!!!!!!!!A platform for wholesail distribution of local FFFFOOOOOOOODDDDDD
+			When user enters the site they specifiy what type of user/consumer they are
+				1. Commerical
+				2. Residential
+			Market the site for users of different classifications.
+				1. Gardeners: People like my parents who have extra veggies who want to give/trade them to hungry people
+				2. Small Farmers/Restaurants: Actually market as a way for farmers to sell veggies to restaurants/retail locations
+				
+					-farmer displays inventory and price.
+					-Restaurant/retail location is able to view inventories and purchase according to their needs
+					-All sails wil be between farm and retail location
+						-Purpose of website will be to facilitate these trades. 
+			For Restaurants:Market as a more transparent and direct method of farm to table. Also a way to have a fresher 			inventory and method of aquisition for restaurants
+			
+			
+			For Farms: Another method and easier and more direct way to sell their inventory
+			
+		!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		UI: Instead of listing every veggie beneath the map.
+			Allow user to click on item on the map and popup displays underneath the map displaying details and method of trade
+		-->

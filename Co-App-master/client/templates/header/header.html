@@ -1,0 +1,41 @@
+<template name="header">
+	
+	<div class="container">
+		<div class="navbar navbar-fixed-top navbar-coapp shadow-z-3" id="green" role="navigation">
+				<div class="navbar-header">
+
+					<a class="navbar-brand" href="{{pathFor 'veggies'}}">The CO-APP</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse pull-right">
+					<ul class="nav navbar-nav">
+						<li class="{{ activeIfTemplateIs 'Veggies' }}">
+							<a href="{{pathFor 'veggies'}}">Available Food</a>
+						</li>
+						{{#if currentUser}}
+						<li class="{{ activeIfTemplateIs 'VeggieSubmit' }}">
+							<a href="{{pathFor 'veggieSubmit'}}">Submit Your Extras</a>
+						</li>
+						<li class="{{ activeIfTemplateIs 'MyMessages' }}">
+							<a href="{{pathFor 'myMessages'}}">My Messages</a>
+						</li>
+						
+						<li>
+							<a href="" id="logout">Log out</a>
+						</li>
+						<li>
+							<a href="">{{user}}</a>
+						</li>
+						{{/if}}
+						{{#if logIn}}
+						<li class="{{ activeIfTemplateIs 'login' }}">
+							<a href="{{pathFor 'login'}}">Log In</a>
+						</li>
+						{{/if}}
+					</ul>
+				</div>
+			
+		</div>
+	</div>
+</template>
+	
+	

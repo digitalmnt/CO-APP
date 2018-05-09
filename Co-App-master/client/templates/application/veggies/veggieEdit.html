@@ -1,0 +1,77 @@
+<template name="veggieEdit">
+	<div class="container">
+		<form class="form-horizontal main messagejumbo" role="form">
+			<div class="col-lg-10">
+				<div class="editInput">Title: <span class="data">{{title}}</span></div>
+				<span class="expandInput">
+					<div class="{{errorClass 'title'}}">
+						<label class="control-label" for="title">Enter any changes to your title here</label>
+						<div class="controls">
+							<input class="form-control" name="title" type="text" value="" placeholder="Type of Food"/>
+							<span class="help-block">{{errorMessage 'title'}}</span>
+						</div>
+					</div>
+				</span>
+			</div>
+			<div class="col-lg-10">
+				<div class="editInput">Specs: <span class="data">{{specifications}}</span></div>
+				<span class="expandInput">
+					<div class="specifications {{errorClass 'specifications'}}">
+						<label class="control-label" for="specifications">Enter title here</label>
+						<div class="controls">
+							<input class="form-control" name="specifications" type="text" value="" placeholder="Specifications"/>
+							<span class="help-block">{{errorMessage 'specifications'}}</span>
+						</div>
+					</div>
+				</span>
+			</div>
+			<div class="col-lg-10">
+				<div class="editInput">Quantity: <span class="data">{{quantity}}</span></div>
+				<span class="expandInput">
+					<div class="">
+						<label class="control-label" for="quantity">How many would you like to part with?</label>
+						<select class="form-control" name="quantity">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+							<option>17</option>
+							<option>18</option>
+							<option>19</option>
+							<option>20</option>
+							<option>21</option>
+						</select>
+					</div>
+				</span>
+			</div>
+			<!--!!!!!!!!!!!!!!!!! Not full Proof, if user picks yes but doesnt enter value for compesation Compensation still shows up -->
+			{{#if donation}}
+			<div class="col-lg-10 comp">
+				<div class="editInput">Compensation: <span class="data">{{compensation}}</span></div>
+				<span class="expandInput">
+					<label class="control-label" for="compensation">What would you like in return?</label>
+					<input class="form-control" name="compensation" type="text" value="" placeholder="Barter price"/>
+				</span>
+			</div>
+			{{/if}}
+			{{> submitMap}}
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-raised btn-success">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

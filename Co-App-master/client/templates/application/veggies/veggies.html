@@ -1,0 +1,40 @@
+<template name="veggies">
+		<div class="modal fade" id="theModal">
+		    <div class="modal-dialog">
+		        <div class="modal-content">
+		            <div class="modal-header">
+		                <h2 class="modal-title">Welcome to the CO-APP!</h2>
+		            </div>
+		            <div class="modal-body">
+		                <p>
+		                   Have some extra food? At one point or another we all do right? The Co-App is here to help you share that extra food, even get something in return if you would like. <br><br>To get started, click on one of the markers to see what people are offerring in your area. If you like what you see, create an account and contact that user through this site. The two of you will then find a way to share! Or, if you are feeling generous, post something that you may want to donate to the community!
+		                </p>
+		            </div>
+		            <div class="modal-footer">
+		                <button class="btn btn-flat" data-dismiss="modal">Close</button>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+			{{> homeMap}}
+
+		<!--<div class="container">
+			
+			{{#each veggie}}
+				<div class="jumbotron singleVeg homeVeg">
+					<h1>Title: {{title}}</h1>
+					<p>Specs: {{specifications}}</p>
+					<p>Quantity: {{quantity}}</p>
+					<p>Posted by: {{author}}</p>
+					<p>Submitted: {{time}}</p>
+					{{#if compensationInput}}<p>Pick-up instructions: {{donation}}</p>{{/if}}
+					{{#if donationInput}}<p>Barter Price: {{compensation}}</p>{{/if}}
+					{{#if veggieOwner}}<a class="editLinkSingleVeggie pull-right" href="{{pathFor 'veggieEdit'}}">Edit</a>{{/if}}
+					{{#if currentUser}}<a class="editLinkSingleVeggie2 pull-right" href="{{pathFor 'veggieBarter'}}">Barter/Contact</a>{{/if}}
+				</div>
+				<a name="{{id}}"></a>
+				<div id="veg"></div>
+			{{/each}}
+		</div>-->
+		
+</template>

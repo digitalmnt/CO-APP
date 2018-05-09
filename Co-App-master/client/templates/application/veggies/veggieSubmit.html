@@ -1,0 +1,75 @@
+<template name="veggieSubmit">
+	<div class="container">
+		<form class="form-horizontal main heady" role="form">
+			<div class="form-group">
+				<div class="col-sm-5 {{errorClass 'title'}}">
+					<label class="control-label" for="title">What type of Food would you like to Barter or Give</label>
+					<div class="controls">
+						<input class="form-control" name="title" type="text" value="" placeholder="Type of Food"/>
+						<span class="help-block">{{errorMessage 'title'}}</span>
+					</div>
+					<div></div>
+				</div>
+				<div class="col-sm-5 specifications {{errorClass 'specifications'}}">
+					<label class="control-label" for="specifications">Please tell us a little more about it</label>
+					<div class="controls">
+						<input class="form-control" name="specifications" type="text" value="" placeholder="Specifications"/>
+						<span class="help-block">{{errorMessage 'specifications'}}</span>
+					</div>
+				</div>
+				<div class="col-sm-5 specifications {{errorClass 'quantity'}}">
+					<label class="control-label" for="quantity">Please enter the quantity or number of units</label>
+					<div class="controls">
+						<input class="form-control" name="quantity" type="text" value="" placeholder="Quantity"/>
+						<span class="help-block">{{errorMessage 'quantity'}}</span>
+					</div>
+				</div>
+				<!--<div class="expand {{errorClass 'donation'}}">
+					<span class="col-sm-6">
+						<label class="control-label" for="image">Upload a picture of your food if you would like</label>
+						<input class="form-control fileUploader" name="image" type="file"/>
+						<span class="help-block">{{errorMessage 'donation'}}</span>
+					</span>
+					
+				</div>-->
+				<div class="col-lg-12 returns">
+					<label class="control-label" for="quantity">Would you like anything in Return?</label>
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-default buttonBarter">
+							<input type="checkbox" autocomplete="off" name="buttonBarter" value="FALSE">Yes
+						</label>
+						<label class="btn btn-default buttonNoBarter">
+							<input type="checkbox" autocomplete="off" name="buttonNoBarter" value="TRUE">No
+						</label>
+					</div>
+					<div class="expand {{errorClass 'compensation'}}">
+						<span class="col-sm-6 barterExpand">
+							<label class="control-label" for="compensation">What would you like in return?</label>
+							<input class="form-control" name="compensation" type="text" value="" placeholder="Barter price"/>
+							<span class="help-block">{{errorMessage 'compensation'}}</span>
+						</span>
+						
+					</div>
+					<div class="expand {{errorClass 'donation'}}">
+						<span class="col-sm-6 donationExpand">
+							<label class="control-label" for="donation">Please give us some instructions on how pick up your doantion</label>
+							<input class="form-control" name="donation" type="text" value="" placeholder="Donation Instructions"/>
+							<span class="help-block">{{errorMessage 'donation'}}</span>
+						</span>
+						
+					</div>
+				</div>
+			</div>
+			<div>
+				<label class="control-label" for="compensation">Please enter your location by double-clicking</label>
+				{{> submitMap}}
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<button type="submit" class="btn btn-raised btn-success">Submit</button>
+					<!--<input  value="Submit" class="submitButton"/>-->
+				</div>
+			</div>
+		</form>
+	</div>
+</template>

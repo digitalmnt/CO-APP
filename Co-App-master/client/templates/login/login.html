@@ -1,0 +1,27 @@
+<template name="login">
+	<form class="form-horizontal main container" role="form">
+		<div class="form-group">
+			<h1 class="pLogin">Please Login Here</h1>
+			<div class="col-sm-5 {{errorClass 'username'}}">
+				<label class="control-label" for="username">Username</label>
+				<div class="controls">
+					<input class="form-control" name="username" type="text" value="" placeholder="Username"/>
+					<span class="help-block">{{errorMessage 'username'}}</span>
+				</div>
+			</div>
+			<div class="col-sm-5 {{errorClass 'password'}}">
+				<label class="control-label" for="email">Password</label>
+				<div class="controls">
+					<input class="form-control" name="password" type="password" value="" placeholder="Password"/>
+					<span class="help-block">{{errorMessage 'password'}}</span>
+				</div>
+			</div>
+			<div class="control-group">
+				<div class="controls">
+					<input type="submit" value="Log in" class="loginButton submitButton"/>
+				</div>
+			</div>
+		</div>
+		<h3>New user? Please register <a class="loginLink" href="{{pathFor 'register'}}">here</a></h3>
+	</form>
+</template>

@@ -1,0 +1,44 @@
+<template name="veggieBarter">
+	<div class="container">
+		<div class="jumbotron singleVeg">
+			<h1>Title: {{title}}</h1>
+			<p>Specs: {{specifications}}</p>
+			<p>Quantity: {{quantity}}</p>
+			<p>Submitted: {{time}}</p>
+			<!--!!!!!!!!!!!!!!!!!!Still work to do here  !!!!!!!!!!!!!!!-->
+			{{#if compensationInput}}<p>Pick-up instructions: {{donation}}</p>{{/if}}
+			{{#if donationInput}}<p>Barter Price: {{compensation}}</p>{{/if}}
+
+				<h1>To: {{author}}</h1>
+				<form role="form">
+					<div class="col-lg-12 {{errorClass 'subject'}}">
+						<label class="control-label" for="title">Subject</label>
+						<div class="controls">
+							<input class="form-control" name="subject" type="text" value="" placeholder="Subject of Inquiry"/>
+							<span class="help-block">{{errorMessage 'subject'}}</span>
+						</div>
+					</div>
+					<div class="col-lg-12 {{errorClass 'body'}}">
+						<label class="control-label" for="body">Message</label>
+						
+						<div class="controls">
+							<textarea class="form-control" name="body" type="text" value="" placeholder="Write your message here"></textarea>
+							<span class="help-block">{{errorMessage 'body'}}</span>
+						</div>
+						<div>None of your information will be revealed to the recipient. If you choose, you may add your email to your message. Otherwise, you may communicate through the CO-APP</div>
+					</div>
+					<div class="control-group barterInput">
+						<div class="controls">
+							<button type="submit" value="Send" class="btn btn-fab btn-raised btn-material-green"><i class="mdi-content-send"></i></button>
+							<!--<input type="submit" class="barterLink"/>-->
+						</div>
+					</div>
+				</form>
+			
+			<div class="barrrterMap">
+				{{> singleVeggieMap}}
+			</div>
+			
+		</div>
+	</div>
+</template>
